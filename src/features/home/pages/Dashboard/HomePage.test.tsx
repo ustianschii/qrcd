@@ -1,6 +1,6 @@
 import { customRender } from "~/utils";
 
-import HomePage from "./HomePage";
+import HomePage from "./Dashboard";
 
 describe("<HomePage />", () => {
   it("should mount", () => {
