@@ -1,15 +1,14 @@
 import { PropsWithChildren } from "react";
 import Stack from "@mui/joy/Stack";
 
-import { Navbar } from "~/components/Navbar";
+import { Header } from "~/components/Header/Header";
+import { PageWrapper } from "~/components/PageWrapper/PageWrapper";
 
-const DefaultLayout: React.FC<PropsWithChildren> = ({ children }) => {
+export const DefaultLayout: React.FC<PropsWithChildren> = ({ children }) => {
   return (
     <Stack direction="column">
-      <Navbar />
-      {children}
+      <Header />
+      <PageWrapper>{children}</PageWrapper>
     </Stack>
   );
 };
-
-export default DefaultLayout;

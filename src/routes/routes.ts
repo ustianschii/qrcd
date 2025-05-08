@@ -1,13 +1,13 @@
 import { RouteConfig } from "~/routes/types";
 import { NotFound } from "~/components/NotFound";
-import Dashboard from "~/features/home/pages/Dashboard/Dashboard";
+import { DashboardPage } from "~/features/dashboard/pages/DashboardPage";
 
 import { paths } from "./paths";
 
 export const routes: RouteConfig[] = [
   {
-    path: paths.Dashboard,
-    component: Dashboard,
+    path: paths.DashboardPage,
+    component: DashboardPage,
   },
   {
     path: "*",
