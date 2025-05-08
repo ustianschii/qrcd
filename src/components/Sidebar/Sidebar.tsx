@@ -17,13 +17,15 @@ import {
 } from "@mui/icons-material";
 import { useLocation, Link } from "react-router";
 
+import variables from "~/styles/scss/variables.module.scss";
+
 const drawerWidth = 240;
 
 const Sidebar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { text: "Home", icon: <SpaceDashboardOutlined />, path: "/" },
+    { text: "Dashboard", icon: <SpaceDashboardOutlined />, path: "/" },
     { text: "QR Codes", icon: <QrCode />, path: "/qrcodes" },
     { text: "Analytics", icon: <BarChart />, path: "/analytics" },
     { text: "Settings", icon: <Settings />, path: "/settings" },
@@ -77,7 +79,9 @@ const Sidebar = () => {
                 cursor: "pointer",
                 color: "black", //use black so it wont show the purple anchor tag color
                 backgroundColor:
-                  location.pathname === item.path ? "#e0e0e0" : "inherit",
+                  location.pathname === item.path
+                    ? variables.$background
+                    : "inherit",
                 "&:hover": {
                   backgroundColor: "#f5f5f5",
                 },
