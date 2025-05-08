@@ -72,8 +72,7 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "pnpm lint",
-      "pnpm madge",
-      "pnpm test ."
+      "pnpm madge"
     ]
   },
   "husky": {
